@@ -3,7 +3,7 @@ import streamlit as st
 
 @st.cache
 def get_data():
-    df = pd.read_csv("car.csv", sep=';')
+    df = pd.read_csv('https://raw.githubusercontent.com/jcmorgado/carprice/master/car.csv', sep=';')
     df = df.drop(columns=['Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9'])
     df = df[['Marca', 'Nome', 'Modelo', 'Ano', 'Faixa', 'Comb', 'Valor']]
     return df
